@@ -1,0 +1,57 @@
+version: "2.0"
+
+stories:
+
+
+- story: subscribe
+  steps:
+  - intent: subscribe
+  - action: utter_email_ask
+  - intent: tell_emailaddress
+    entities:
+    - email: abcdef@dfds.de
+  - action: utter_email_subscribed
+
+
+- story: what can i do 1
+  steps:
+  - intent: choice_to_do
+  - action: utter_give_choices
+  - intent: subscribe
+  - action: utter_email_ask
+  - intent: tell_emailaddress
+    entities:
+      - email: a@b.com
+  - action: utter_email_subscribed
+
+- story: what can i do 2
+  steps:
+  - intent: choice_to_do
+  - action: utter_give_choices
+  - intent: hello_world
+  - action: action_hello_world
+
+- story: hello world
+  steps:
+    - intent: hello_world
+    - action: action_hello_world
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: interactive_story_2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: subscribe
+  - action: utter_email_ask
+  - intent: tell_emailaddress
+    entities:
+    - email: zzzz@yyyy.net
+  - action: utter_email_subscribed
+  - intent: goodbye
+  - action: utter_goodbye

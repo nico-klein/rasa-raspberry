@@ -1,0 +1,42 @@
+version: '2.0'
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- tell_emailaddress
+- tell_name
+- greet
+- subscribe
+- goodbye
+- end
+- affirm
+- deny
+- bot_challenge
+- choice_to_do
+- hello_world
+entities:
+- email
+- name
+slots:
+  email:
+    type: text
+  name:
+    type: text
+responses:
+  utter_greet:
+  - text: Hallo
+  utter_goodbye:
+  - text: Tschüss
+  utter_iamabot:
+  - text: Ja, natürlich bin ich ein Roboter.
+  utter_email_ask:
+  - text: Wie ist Deine emailadresse?
+  utter_email_subscribed:
+  - text: Eine Bestätigung wurde an {email} gesendet.
+  utter_give_choices:
+    - text: "Du kannst wählen ..."
+      buttons:
+        - title: "Hallo Welt"
+        - title: "Newsletter bestellen"
+actions:
+- action_hello_world
