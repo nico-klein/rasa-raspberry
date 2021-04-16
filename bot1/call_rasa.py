@@ -1,5 +1,6 @@
 import os
 import sys
+import sklearn # must bei imported before rasa on my pi to avoid errors
 
 # insert path of this script in syspath so actions.py will be found
 sys.path.insert(1, os.path.dirname(os.path.abspath(__file__)))
