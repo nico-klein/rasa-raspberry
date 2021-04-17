@@ -19,11 +19,20 @@
                     "name": "AMAZON.StopIntent",
                     "samples": [
                         "stop",
-                        "ok bye"
+                        "ok bye",
+                        "Ende"
                     ]
                 },
                 {
                     "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
                     "samples": []
                 }
             ],
@@ -88,7 +97,7 @@
                         },
                         {
                             "name": {
-                                "value": "सागला िमनख आज़ाद अर ूितƵा ने आिधकारां रȣ बरोबरȣ िलयोडा पैदा होवे। åहां मɅ"
+                                "value": "सागला िमनख आज़ाद अर ूितƵा ने आिधकारां रȣ बरोबरȣ िलयोडा पैदा होवे। åहां मɅ"
                             }
                         },
                         {

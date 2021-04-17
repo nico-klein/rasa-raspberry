@@ -1,3 +1,6 @@
+# from https://blog.rasa.com/connect-your-rasa-ai-assistant-to-amazon-alexa/
+# changed to german and add debug
+
 import logging
 import json
 from sanic import Blueprint, response
