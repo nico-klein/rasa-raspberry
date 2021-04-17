@@ -25,13 +25,8 @@ libncursesw5-dev libc6-dev openssl git
 
 # build and install tensorflow 
 ## install bazel 
-* see also https://github.com/PINTO0309/
-* curl -sc /tmp/cookie "https://drive.google.com/uc?export=download&id=1xeUKKZeQMz_37DTzBUUXl01m-Nv97WZO" > /dev/null
-* CODE="$(awk '/_warning_/ {print $NF}' /tmp/cookie)"
-* curl -Lb /tmp/cookie "https://drive.google.com/uc?export=download&confirm=${CODE}&id=1xeUKKZeQMz_37DTzBUUXl01m-Nv97WZO" -o bazel
-* sudo chmod +x bazel
-* sudo cp ./bazel /usr/local/bin
-* rm ./bazel
+* see https://github.com/PINTO0309/Bazel_bin
+* https://github.com/PINTO0309/Bazel_bin/blob/main/3.7.2/aarch64/install.sh
 
 ## build tensorflow 2.3 (venv activated)
 * the build takes a long time on the raspberry (>10 hours)
