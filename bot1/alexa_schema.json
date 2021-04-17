@@ -1,7 +1,7 @@
 {
     "interactionModel": {
         "languageModel": {
-            "invocationName": "text mood bot",
+            "invocationName": "bot eins",
             "intents": [
                 {
                     "name": "ReturnUserInput",

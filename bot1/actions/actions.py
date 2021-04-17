@@ -30,6 +30,6 @@ class ActionHelloWorld(Action):
 
         dispatcher.utter_message(text="Hallo Welt 3")
 
-        logger.debug([i for i in domain.keys()])
+        # logger.debug([i for i in domain.keys()])
 
         return []

@@ -42,9 +42,11 @@ class AlexaConnector(InputChannel):
             # check to see if the user is trying to launch the skill
             intenttype = payload["request"]["type"]
 
+            logger.debug(payload["request"])
+
             # if the user is starting the skill, let them know it worked & what to do next
             if intenttype == "LaunchRequest":
-                message = "Hello! Welcome to this Rasa-powered Alexa skill. You can start by saying 'hi'."
+                message = "Hallo Das ist ein Alexa Skill basierend auf RASA."
                 session = "false"
             else:
                 # get the Alexa-detected intent
@@ -53,7 +55,7 @@ class AlexaConnector(InputChannel):
                 # makes sure the user isn't trying to end the skill
                 if intent == "AMAZON.StopIntent":
                     session = "true"
-                    message = "Talk to you later"
+                    message = "Auf Wiedersehen"
                 else:
                     # get the user-provided text from the slot named "text"
                     text = payload["request"]["intent"]["slots"]["text"]["value"]
