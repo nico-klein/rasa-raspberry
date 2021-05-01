@@ -35,19 +35,23 @@ nlu:
 - intent: subscribe
   examples: |
     - Ich möchte einen Newsletter
-- regex: email
-  examples: |
-    - \w{1,100}@\w{1,100}\.\w{2,4}
+    - newsletter
 - intent: tell_emailaddress
   examples: |
     - Meine email Adresse ist  [a@b.com](email)
     - Email is [zzz@yyy.net](email)
+    - [a@b.com](email)
 - intent: choice_to_do
   examples: |
     - Was kann ich machen?
     - Hilfe
     - Hauptmenü
+    - hilfe
 - intent: hello_world
   examples: |
     - Hallo Welt
     - helloworld
+    - hallo welt
+- regex: email
+  examples: |
+    - \w{1,100}@\w{1,100}\.\w{2,4}
