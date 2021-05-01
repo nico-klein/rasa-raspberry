@@ -1,27 +1,46 @@
 version: '2.0'
+config:
+  store_entities_as_slots: true
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
 intents:
-- tell_emailaddress
-- tell_name
-- greet
-- subscribe
-- goodbye
-- end
-- affirm
-- deny
-- bot_challenge
-- choice_to_do
-- hello_world
+- tell_emailaddress:
+    use_entities: true
+- tell_name:
+    use_entities: true
+- greet:
+    use_entities: true
+- subscribe:
+    use_entities: true
+- goodbye:
+    use_entities: true
+- end:
+    use_entities: true
+- affirm:
+    use_entities: true
+- deny:
+    use_entities: true
+- bot_challenge:
+    use_entities: true
+- choice_to_do:
+    use_entities: true
+- hello_world:
+    use_entities: true
 entities:
 - email
 - name
 slots:
   email:
-    type: text
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
   name:
-    type: text
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
 responses:
   utter_greet:
   - text: Hallo
@@ -34,9 +53,11 @@ responses:
   utter_email_subscribed:
   - text: Eine Bestätigung wurde an {email} gesendet.
   utter_give_choices:
-    - text: "Du kannst wählen ..."
-      buttons:
-        - title: "Hallo Welt"
-        - title: "Newsletter bestellen"
+  - buttons:
+    - title: Hallo Welt
+    - title: Newsletter bestellen
+    text: Du kannst wählen ...
 actions:
 - action_hello_world
+forms: {}
+e2e_actions: []
