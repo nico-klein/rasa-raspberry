@@ -1,8 +1,9 @@
 # Playground Rasa on a Raspberry Pi connected to Alexa
+## ubuntu 20.04 / python 3.8 / tensorflow 2.3 / rasa 2.3
 It's only a test project to get RASA running on a raspberry pi and connect to an Alexa Skill.
 
 # Install a raspberry pi
-I didn't found all needed packages to get rasa running. That's why I build tensorflow and the needed components myself.
+I didn't found all needed packages for the raspberry pi to get rasa running. That's why I build tensorflow with text and addons myself.
 
 * base image: ubuntu-20.04.2-preinstalled-server-arm64+raspi.img
 * I used a raspberry pi 4 with 8 GB ram. This works fine
