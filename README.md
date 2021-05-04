@@ -70,11 +70,27 @@ libncursesw5-dev libc6-dev openssl git
 # install rasa
 * pip3 install rasa==2.3.4
 * You start rasa with custom python script if rasa returns errors with scikit-learn. 
-    * python3 call_rasa.py [args]
+   * insert in rasa start-script (in /venv/bin/): import sklearn
+  
+# install rasa x
+* pip3 install rasa-x --extra-index-url https://pypi.rasa.com/simple
+* start with rasa x (will start rasa x on port 5002 and rasa server on port 5005 but not actions server)
+
+# create sqlite db to log coversations
+* can be created or rase will create when starting server 
+  (e.g. in folder of bot: sqlite3 bot1_sqlite.db )
+* add entry in endpoints.yml
 
 # install ngrok if you want to connect to alexa skill
 * sudo snap install ngrok
 * If you create a free account you can get a token and will not have the 2 hour limitation
 
-# connect to Alexea
+# connect to Alexa
 * see the very good description and video https://blog.rasa.com/connect-your-rasa-ai-assistant-to-amazon-alexa/
+* POST from alexa go to http://server:5005/webhooks/alexa_assistant/webhook
+* check status with http://server::5005/webhooks/alexa_assistant
+
+# ports
+* rasa server   : 5005 ( check with http://server:5005/version )
+* action server : 5055
+* rasa x        : 5002 (default with password. see when rasa x has started)
