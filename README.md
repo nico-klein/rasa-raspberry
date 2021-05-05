@@ -74,6 +74,7 @@ libncursesw5-dev libc6-dev openssl git
   
 # install rasa x
 * pip3 install rasa-x --extra-index-url https://pypi.rasa.com/simple
+* if problems on mac you could try: pip install --upgrade pip==20.2 
 * start with rasa x (will start rasa x on port 5002 and rasa server on port 5005 but not actions server)
 
 # create sqlite db to log coversations

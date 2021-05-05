@@ -19,8 +19,8 @@ action_endpoint:
 
 tracker_store:
      type: SQL
-     url: sqlite:///./bot1_sqlite.db
-     db: bot1_sqlite.db
+     url: sqlite:///./bot1_tracker_store.sqlite
+     db: bot1_tracker_store.sqliteb
 
 #tracker_store:
 #    type: redis
