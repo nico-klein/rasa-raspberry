@@ -1,35 +1,49 @@
-version: '2.0'
+version: "2.0"
 config:
   store_entities_as_slots: true
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
 intents:
-- tell_emailaddress:
-    use_entities: true
-- tell_name:
-    use_entities: true
-- greet:
-    use_entities: true
-- subscribe:
-    use_entities: true
-- goodbye:
-    use_entities: true
-- end:
-    use_entities: true
-- affirm:
-    use_entities: true
-- deny:
-    use_entities: true
-- bot_challenge:
-    use_entities: true
-- choice_to_do:
-    use_entities: true
-- hello_world:
-    use_entities: true
+  - tell_emailaddress:
+      use_entities: true
+  - tell_name:
+      use_entities: true
+  - greet:
+      use_entities: true
+  - subscribe:
+      use_entities: true
+  - goodbye:
+      use_entities: true
+  - end:
+      use_entities: true
+  - stop:
+      use_entities: []
+  - affirm:
+      use_entities: true
+  - deny:
+      use_entities: true
+  - bot_challenge:
+      use_entities: true
+  - choice_to_do:
+      use_entities: true
+  - hello_world:
+      use_entities: []
+  - move:
+      use_entities:
+        - city
+  - callback:
+      use_entities:
+        - day_of_week
+  - order:
+      use_entities:
+        - device
+        - tarif
 entities:
-- email
-- name
+  - email
+  - name
+  - city
+  - day_of_week
 slots:
   email:
     type: rasa.shared.core.slots.TextSlot
@@ -41,23 +55,71 @@ slots:
     initial_value: null
     auto_fill: true
     influence_conversation: true
+  day_of_week:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
+  city_from:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
+  city_to:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
+  order_device:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
+  order_tarif:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
+  requested_slot:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
 responses:
   utter_greet:
-  - text: Hallo
+    - text: Hallo
   utter_goodbye:
-  - text: Tschüss
+    - text: Tschüss
   utter_iamabot:
-  - text: Ja, natürlich bin ich ein Roboter.
+    - text: Ja, natürlich bin ich ein Roboter.
   utter_email_ask:
-  - text: Wie ist Deine emailadresse?
+    - text: Wie ist Deine emailadresse?
   utter_email_subscribed:
-  - text: Eine Bestätigung wurde an {email} gesendet.
+    - text: Eine Bestätigung wurde an {email} gesendet.
+  utter_move_confirm:
+    - text: Der Umzug von {city_from} nach {city_to} findet statt.
+  utter_callback_confirm:
+    - text: Der Rückruf erfolgt am {day_of_week}.
   utter_give_choices:
-  - buttons:
-    - title: Hallo Welt
-    - title: Newsletter bestellen
-    text: Du kannst wählen ...
+    - buttons:
+        - payload: /hello_world
+          title: Hallo Welt
+        - payload: /subscribe
+          title: Newsletter bestellen
+      text: Du kannst wählen ...
+  utter_order_confirmed:
+    - text: Danke für die Bestellung von {order_device} mit Tarif {order_tarif}
+  utter_ask_order_form_order_device:
+    - text: Welches Handy wollen Sie?
+  utter_ask_order_form_order_tarif:
+    - text: Welchen Tarif wollen Sie?
 actions:
-- action_hello_world
-forms: {}
+  - action_hello_world
+  - action_move_slot_mapping
+forms:
+  order_form:
+    order_device:
+      - type: from_text
+    order_tarif:
+      - type: from_text
 e2e_actions: []

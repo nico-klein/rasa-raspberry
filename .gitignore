@@ -4,6 +4,7 @@ events.*
 models/
 *.sqlite
 
+.vscode
 
 # other
 __pycache__/

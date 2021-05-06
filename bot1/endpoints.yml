@@ -18,9 +18,9 @@ action_endpoint:
 # https://rasa.com/docs/rasa/tracker-stores
 
 tracker_store:
-     type: SQL
-     url: sqlite:///./bot1_tracker_store.sqlite
-     db: bot1_tracker_store.sqliteb
+  type: SQL
+  url: sqlite:///./bot1_tracker_store.sqlite
+  db: bot1_tracker_store.sqliteb
 
 #tracker_store:
 #    type: redis

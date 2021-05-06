@@ -1,57 +1,93 @@
 version: "2.0"
 
 stories:
+  - story: subscribe
+    steps:
+      - intent: subscribe
+      - action: utter_email_ask
+      - intent: tell_emailaddress
+        entities:
+          - email: abcdef@dfds.de
+      - action: utter_email_subscribed
 
+  - story: what can i do 1
+    steps:
+      - intent: choice_to_do
+      - action: utter_give_choices
+      - intent: subscribe
+      - action: utter_email_ask
+      - intent: tell_emailaddress
+        entities:
+          - email: a@b.com
+      - action: utter_email_subscribed
 
-- story: subscribe
-  steps:
-  - intent: subscribe
-  - action: utter_email_ask
-  - intent: tell_emailaddress
-    entities:
-    - email: abcdef@dfds.de
-  - action: utter_email_subscribed
+  - story: what can i do 2
+    steps:
+      - intent: choice_to_do
+      - action: utter_give_choices
+      - intent: hello_world
+      - action: action_hello_world
 
+  - story: hello world
+    steps:
+      - intent: hello_world
+      - action: action_hello_world
 
-- story: what can i do 1
-  steps:
-  - intent: choice_to_do
-  - action: utter_give_choices
-  - intent: subscribe
-  - action: utter_email_ask
-  - intent: tell_emailaddress
-    entities:
-      - email: a@b.com
-  - action: utter_email_subscribed
+  - story: interactive_story_1
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: goodbye
+      - action: utter_goodbye
 
-- story: what can i do 2
-  steps:
-  - intent: choice_to_do
-  - action: utter_give_choices
-  - intent: hello_world
-  - action: action_hello_world
+  - story: interactive_story_2
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: subscribe
+      - action: utter_email_ask
+      - intent: tell_emailaddress
+        entities:
+          - email: zzzz@yyyy.net
+      - action: utter_email_subscribed
+      - intent: goodbye
+      - action: utter_goodbye
 
-- story: hello world
-  steps:
-    - intent: hello_world
-    - action: action_hello_world
+  - story: interactive_story_3
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: move
+      - action: action_move_slot_mapping
+      - action: utter_move_confirm
 
-- story: interactive_story_1
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: goodbye
-  - action: utter_goodbye
+  - story: interactive_story_4
+    steps:
+      - intent: move
+      - action: action_move_slot_mapping
+      - action: utter_move_confirm
 
-- story: interactive_story_2
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: subscribe
-  - action: utter_email_ask
-  - intent: tell_emailaddress
-    entities:
-    - email: zzzz@yyyy.net
-  - action: utter_email_subscribed
-  - intent: goodbye
-  - action: utter_goodbye
+  - story: interactive_story_5
+    steps:
+      - intent: callback
+        entities:
+          - day_of_week: Montag
+      - action: utter_callback_confirm
+
+  - story: interactive_story_6
+    steps:
+      - intent: order
+      - action: order_form
+      - active_loop: order_form
+      - slot_was_set:
+          - requested_slot: order_device
+      - slot_was_set:
+          - order_device: iphone
+      - slot_was_set:
+          - requested_slot: order_tarif
+      - slot_was_set:
+          - order_tarif: XL
+      - slot_was_set:
+          - requested_slot: null
+      - active_loop: null
+      - action: utter_order_confirmed
