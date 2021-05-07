@@ -1,87 +1,95 @@
 version: "2.0"
 nlu:
-  - intent: greet
-    examples: |
-      - Hi
-      - Hallo
-      - Guten Morgen
-      - Guten Abend
-      - Moin
-  - intent: goodbye
-    examples: |
-      - Tschüss
-      - Auf Wiedersehen
-  - intent: affirm
-    examples: |
-      - ja
-      - jo
-      - natürlich
-      - sicher
-      - korrekt
-      - klingt gut
-  - intent: deny
-    examples: |
-      - no
-      - nein
-      - niemals
-      - Ich denke nein
-      - Ich denke nicht
-      - don't like that
-  - intent: stop
-    examples: |
-      - ende
-      - weg hier
-      - aufhören
-      - stop
-      - Abbruch
-  - intent: bot_challenge
-    examples: |
-      - Bist Du ein Roboter?
-      - Bist Du ein Bot?
-      - Bist Du ein Mensch?
-  - intent: subscribe
-    examples: |
-      - Ich möchte einen Newsletter
-      - newsletter
-  - intent: tell_emailaddress
-    examples: |
-      - Meine email Adresse ist  [a@b.com](email)
-      - Email is [zzz@yyy.net](email)
-      - [a@b.c](email)
-  - regex: email
-    examples: |
-      - \w{1,100}@\w{1,100}\.\w{2,4}
-  - intent: choice_to_do
-    examples: |
-      - Was kann ich machen?
-      - Hilfe
-      - Hauptmenü
-      - hilfe
-  - intent: hello_world
-    examples: |
-      - Hallo Welt
-      - helloworld
-      - hallo welt
-  - intent: move
-    examples: |
-      - Ich moechte von [Bonn]{"entity" : "city", "role": "from"} nach [Berlin]{"entity" : "city", "role": "to"} umziehen 
-      - von [a]{"entity" : "city", "role": "from"} nach [b]{"entity" : "city", "role": "to"}
-      - Umzug
-      - Umzug von [bbb]{"entity" : "city", "role": "from"} nach [ccc]{"entity" : "city", "role": "to"}
-  - intent: callback
-    examples: |
-      - ich möchte einen Rückruf am [Montag](day_of_week)
-      - Rückruf [Dienstag](day_of_week)
-  - lookup: day_of_week
-    examples: |
-      - Montag
-      - Dienstag
-      - Mittwoch
-      - Donnerstag
-      - Freitag
-      - Samstag
-      - Sonntag
-  - intent: order
-    examples: |
-      - Ich möchte bestellen.
-      - Auftrag
+- intent: greet
+  examples: |
+    - Hi
+    - Hallo
+    - Guten Morgen
+    - Guten Abend
+    - Moin
+    - Moin moin
+    - hallo
+- intent: goodbye
+  examples: |
+    - Tschüss
+    - Auf Wiedersehen
+    - cu
+- intent: affirm
+  examples: |
+    - ja
+    - jo
+    - natürlich
+    - sicher
+    - korrekt
+    - klingt gut
+- intent: deny
+  examples: |
+    - no
+    - nein
+    - niemals
+    - Ich denke nein
+    - Ich denke nicht
+    - don't like that
+- intent: stop
+  examples: |
+    - ende
+    - weg hier
+    - aufhören
+    - stop
+    - Abbruch
+- intent: bot_challenge
+  examples: |
+    - Bist Du ein Roboter?
+    - Bist Du ein Bot?
+    - Bist Du ein Mensch?
+- intent: subscribe
+  examples: |
+    - Ich möchte einen Newsletter
+    - newsletter
+- intent: tell_emailaddress
+  examples: |
+    - Meine email Adresse ist  [a@b.com](email)
+    - Email is [zzz@yyy.net](email)
+    - [a@b.c](email)
+    - [ab.com](email)
+    - email [a@b.com](email)
+- intent: choice_to_do
+  examples: |
+    - Was kann ich machen?
+    - Hilfe
+    - Hauptmenü
+    - hilfe
+- intent: hello_world
+  examples: |
+    - Hallo Welt
+    - helloworld
+    - hallo welt
+    - Hallo welt
+- intent: move
+  examples: |
+    - Ich moechte von [Bonn]{"entity": "city", "role": "from"} nach [Berlin]{"entity": "city", "role": "to"} umziehen
+    - von [a]{"entity": "city", "role": "from"} nach [b]{"entity": "city", "role": "to"}
+    - Umzug von [bbb]{"entity": "city", "role": "from"} nach [ccc]{"entity": "city", "role": "to"}
+- intent: callback
+  examples: |
+    - ich möchte einen Rückruf am [Montag](day_of_week)
+    - Rückruf [Mittwoch](day_of_week)
+    - ich möchte einen Rückruf am [Mittwoch](day_of_week)
+    - Rückruf [Dienstag](day_of_week)
+- intent: order
+  examples: |
+    - Ich möchte bestellen.
+    - Auftrag
+    - auftrag
+- regex: email
+  examples: |
+    - \w{1,100}@\w{1,100}\.\w{2,4}
+- lookup: day_of_week
+  examples: |
+    - Montag
+    - Dienstag
+    - Mittwoch
+    - Donnerstag
+    - Freitag
+    - Samstag
+    - Sonntag

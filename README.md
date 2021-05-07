@@ -1,6 +1,7 @@
 # Playground Rasa on a Raspberry Pi connected to Alexa
 ## ubuntu 20.04 / python 3.8 / tensorflow 2.3 / rasa 2.3
 It's only a test project to get RASA running on a raspberry pi and connect to an Alexa Skill.
+It works also with win 10 or macos 
 
 # Install a raspberry pi
 I didn't found all needed packages for the raspberry pi to get rasa running. That's why I build tensorflow with text and addons myself.
@@ -76,12 +77,11 @@ libncursesw5-dev libc6-dev openssl git
 * pip3 install rasa-x --extra-index-url https://pypi.rasa.com/simple
 * if problems on mac you could try: pip install --upgrade pip==20.2 
 * start with rasa x (will start rasa x on port 5002 and rasa server on port 5005 but not actions server)
-* if rasa x starts with errors encoding and utf-8 
-  in windows: set PYTHONUTF8=1
+* windows only: if rasa x starts with errors encoding and utf-8 _>  set PYTHONUTF8=1
 
 # create sqlite db to log coversations
-* can be created or rase will create when starting server 
-  (e.g. in folder of bot: sqlite3 bot1_sqlite.db )
+* can be created but rasa will create one if not there when starting server 
+  (e.g. in folder of bot: sqlite3 bot1.sqlite)
 * add entry in endpoints.yml
 
 # install ngrok if you want to connect to alexa skill
@@ -92,6 +92,19 @@ libncursesw5-dev libc6-dev openssl git
 * see the very good description and video https://blog.rasa.com/connect-your-rasa-ai-assistant-to-amazon-alexa/
 * POST from alexa go to http://server:5005/webhooks/alexa_assistant/webhook
 * check status with http://server::5005/webhooks/alexa_assistant
+
+# spacy and other language
+* pip install spacy
+* python -m spacy download de_dep_news_trf
+* python -m spacy download de_core_news_sm
+
+# proxy (windows)
+* rasa action server could have problems to connect rasa x with activated proxy
+  set http_proxy=
+  set https_proxy=
+
+# python 
+* freeze current installtion settings e.g. : python -m pip freeze >requirements_rasa25.txt
 
 # ports
 * rasa server   : 5005 ( check with http://server:5005/version )
