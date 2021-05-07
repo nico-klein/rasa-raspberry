@@ -116,11 +116,5 @@ responses:
 actions:
 - action_hello_world
 - action_move_slot_mapping
-forms:
-  order_form:
-    required_slots:
-      order_device:
-      - type: from_text
-      order_tarif:
-      - type: from_text
+forms: {}
 e2e_actions: []

@@ -3,13 +3,7 @@
 language: de
 
 pipeline:
-#  - name: WhitespaceTokenizer
-  - name: SpacyNLP
-    model: "de_core_news_sm"
-  - name: SpacyTokenizer
-  - name: SpacyEntityExtractor
-  - name: SpacyFeaturizer
-    pooling: mean
+  - name: WhitespaceTokenizer
   - name: RegexFeaturizer
   - name: LexicalSyntacticFeaturizer
   - name: CountVectorsFeaturizer

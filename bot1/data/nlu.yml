@@ -76,11 +76,6 @@ nlu:
     - Rückruf [Mittwoch](day_of_week)
     - ich möchte einen Rückruf am [Mittwoch](day_of_week)
     - Rückruf [Dienstag](day_of_week)
-- intent: order
-  examples: |
-    - Ich möchte bestellen.
-    - Auftrag
-    - auftrag
 - regex: email
   examples: |
     - \w{1,100}@\w{1,100}\.\w{2,4}
