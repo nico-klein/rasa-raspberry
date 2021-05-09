@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f08580ea-8144-4c67-8a76-87eddce0d173" name="Default Changelist" comment="readme">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/rasa.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/rasa.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bot1/endpoints.yml" beforeDir="false" afterPath="$PROJECT_DIR$/bot1/endpoints.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,6 +71,12 @@
       <workItem from="1620112469232" duration="4826000" />
       <workItem from="1620132274719" duration="3120000" />
       <workItem from="1620201052938" duration="58000" />
+      <workItem from="1620227211141" duration="530000" />
+      <workItem from="1620292739780" duration="647000" />
+      <workItem from="1620312690454" duration="25000" />
+      <workItem from="1620313055406" duration="614000" />
+      <workItem from="1620406258241" duration="2855000" />
+      <workItem from="1620594955282" duration="76000" />
     </task>
     <task id="LOCAL-00001" summary="initialize project">
       <created>1618592325412</created>
@@ -116,7 +120,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619885509139</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="fixes">
+      <created>1620227233828</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1620227233828</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -138,7 +149,8 @@
     <MESSAGE value="initialize project" />
     <MESSAGE value="alexa changes" />
     <MESSAGE value="readme" />
-    <option name="LAST_COMMIT_MESSAGE" value="readme" />
+    <MESSAGE value="fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixes" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/rasa$rasa_run_actions.coverage" NAME="rasa run actions Coverage Results" MODIFIED="1620132693633" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bot1" />

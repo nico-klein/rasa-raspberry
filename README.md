@@ -103,6 +103,15 @@ libncursesw5-dev libc6-dev openssl git
   set http_proxy=
   set https_proxy=
 
+# install duckling for DucklingEntityExtractor
+* sudo apt install haskell-stack
+* sudo apt install ghc
+* sudo apt install libpcre3 libpcre3-dev
+* git@github.com:facebook/duckling.git
+* cd duckling
+* stack build --system-ghc
+* start with : stack exec duckling-example-exe --system-ghc
+
 # python 
 * freeze current installtion settings e.g. : python -m pip freeze >requirements_rasa25.txt
 
