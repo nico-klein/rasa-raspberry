@@ -119,3 +119,4 @@ libncursesw5-dev libc6-dev openssl git
 * rasa server   : 5005 ( check with http://server:5005/version )
 * action server : 5055
 * rasa x        : 5002 (default with password. see when rasa x has started)
+* duckling      : 8000

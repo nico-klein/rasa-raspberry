@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f08580ea-8144-4c67-8a76-87eddce0d173" name="Default Changelist" comment="readme">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/rasa.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/rasa.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -76,7 +73,7 @@
       <workItem from="1620312690454" duration="25000" />
       <workItem from="1620313055406" duration="614000" />
       <workItem from="1620406258241" duration="2855000" />
-      <workItem from="1620594955282" duration="76000" />
+      <workItem from="1620594955282" duration="184000" />
     </task>
     <task id="LOCAL-00001" summary="initialize project">
       <created>1618592325412</created>
@@ -127,7 +124,14 @@
       <option name="project" value="LOCAL" />
       <updated>1620227233828</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="install duckling">
+      <created>1620595053912</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1620595053912</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -150,7 +154,8 @@
     <MESSAGE value="alexa changes" />
     <MESSAGE value="readme" />
     <MESSAGE value="fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixes" />
+    <MESSAGE value="install duckling" />
+    <option name="LAST_COMMIT_MESSAGE" value="install duckling" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/rasa$rasa_run_actions.coverage" NAME="rasa run actions Coverage Results" MODIFIED="1620132693633" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bot1" />
